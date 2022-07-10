@@ -63,7 +63,7 @@ nav {
 @media screen and (max-width: 768px) {
   nav {
     margin-right: 0;
-    width: max-content;
+    width: 650px;
   }
 }
 </style>
