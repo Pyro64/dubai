@@ -29,6 +29,7 @@ nav {
 
   &:hover {
     color: $primary;
+
     &::after {
       width: 50%;
       opacity: 0.7;
@@ -56,6 +57,13 @@ nav {
 .router-link-exact-active {
   &::after {
     width: 50%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  nav {
+    margin-right: 0;
+    width: max-content;
   }
 }
 </style>

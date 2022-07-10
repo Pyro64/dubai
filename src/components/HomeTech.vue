@@ -2,7 +2,7 @@
   <div class="tech">
     <my-title title="Technologies we work with"/>
     <div class="tech__block">
-      <router-link to="/" class="tech__item" v-for="t in tech" :key="t.id">
+      <router-link v-motion-pop-visible to="/" class="tech__item" v-for="t in tech" :key="t.id">
         <img class="tech__svg" :src="t.src" :alt="t.text">
         <div class="tech__title">{{ t.text }}</div>
         <div class="tech__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur culpa eum ex,
@@ -106,7 +106,7 @@ const tech = [
     &:hover {
       @include hover;
 
-      .about {
+      .tech {
         &__svg {
           opacity: 1;
         }
@@ -115,8 +115,8 @@ const tech = [
   }
 
   &__svg {
-    @include fluid(width, 30px, 60px);
-    @include fluid(height, 30px, 60px);
+    @include fluid(width, 50px, 60px);
+    @include fluid(height, 50px, 60px);
     @include fluid(margin-bottom, 10px, 20px);
     transition: $trn;
     opacity: 0.8;
@@ -126,6 +126,7 @@ const tech = [
   &__title {
     @include fluid(font-size, 14px, 18px);
     @include fluid(margin-bottom, 10px, 20px);
+    color: #fff;
     text-transform: uppercase;
     font-weight: 600;
   }
@@ -135,4 +136,27 @@ const tech = [
   }
 }
 
+@media screen and (max-width: 992px) {
+  .tech {
+
+    &__block {
+      justify-content: space-between;
+    }
+
+    &__item {
+      width: 49%;
+      margin-right: 0;
+      margin-bottom: 2%;
+    }
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .tech {
+    &__item {
+      width: 100%;
+      margin-bottom: 30px;
+    }
+  }
+}
 </style>

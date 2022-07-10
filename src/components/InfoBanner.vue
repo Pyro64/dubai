@@ -1,11 +1,16 @@
 <template>
   <div class="support">
-    <div :style="{background: `${background}`}" class="support__block">
+    <div :class="{'support__block-active': isHover }" class="support__block">
       <div class="support__item">
         <div class="support__title">{{ title }}</div>
         <div class="support__text">{{ text }}
         </div>
-        <router-link :to="to" class="support__link">Подробнее</router-link>
+        <n-button
+            v-on:mouseenter="isHover = true"
+            v-on:mouseleave="isHover = false"
+            class="support__btn">
+          Apply
+        </n-button>
       </div>
       <img :src="img" alt="banner" class="support__img">
     </div>
@@ -13,6 +18,8 @@
 </template>
 
 <script setup>
+import {ref} from 'vue'
+
 const props = defineProps({
   title: {
     type: String,
@@ -32,6 +39,9 @@ const props = defineProps({
   },
   background: String
 });
+
+
+const isHover = ref(false)
 </script>
 
 <style lang="scss" scoped>
@@ -45,70 +55,123 @@ const props = defineProps({
     display: flex;
     align-items: flex-end;
     justify-content: space-between;
-    background: $dark;
+    backdrop-filter: blur(12px);
+    position: relative;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 10px;
+    overflow: hidden;
 
-    &:hover {
-      .support {
-        &__link {
+    &::before {
+      transition: $trn;
+      content: '';
+      z-index: 2;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      background: rgba(0, 0, 0, 0.2);
+      left: 0;
+      top: 0;
+    }
 
-        }
+    &-active {
+      &::before {
+        background: rgba(0, 0, 0, 0);
       }
     }
   }
 
+
   &__item {
     width: 48%;
+    position: relative;
+    z-index: 3;
     @include fluid(padding, 50px, 100px);
   }
 
   &__img {
+    @include fluid(height, 300px, 544px);
+    transition: $trn;
+    position: relative;
     width: 50%;
-    @include fluid(height, 300px, 490px);
+    z-index: 1;
     object-fit: cover;
-    object-position: top;
+
   }
 
   &__title {
     @include fluid(font-size, 28px, 48px);
     @include fluid(margin-bottom, 15px, 25px);
     font-weight: 700;
-    color: $primary;
+    color: #fff;
   }
 
   &__text {
     @include fluid(margin-bottom, 25px, 50px);
     @include fluid(font-size, 22px, 36px);
     font-weight: 500;
-    color: $primary;
+    color: #fff;
   }
 
-  &__link {
-    @include fluid(font-size, 14px, 24px);
-    font-weight: 400;
-    color: $primary;
-    position: relative;
-    transition: $trn;
-
-    &::before {
-      transition: $trn;
-      @include fluid(width, 5px, 7px);
-      @include fluid(height, 10px, 12px);
-      @include fluid(right, -10px, -15px);
-      content: '';
-      position: absolute;
-      top: 55%;
-      transform: translateY(-50%);
-      background: url("../assets/images/icon/arrow-right.svg") no-repeat;
-      background-size: contain;
-    }
+  &__btn {
+    @include fluid(padding-top, 10px, 25px);
+    @include fluid(padding-bottom, 10px, 25px);
+    @include fluid(padding-right, 50px, 100px);
+    @include fluid(padding-left, 50px, 100px);
+    @include fluid(font-size, 16px, 18px);
+    border-radius: 25px;
+    width: fit-content;
+    font-weight: 600;
+    background: rgba(33, 177, 255, 0.7);
+    color: #fff;
 
     &:hover {
-      color: $primary;
+      background: rgba(33, 177, 255, 0.9);
+      color: #fff;
+    }
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .support {
+    &__block {
+      padding-top: 100px;
+      padding-bottom: 100px;
+      padding-left: 30px;
+      padding-right: 30px;
 
       &::before {
-        @include fluid(right, -15px, -20px);
-        filter: invert(30%) sepia(43%) saturate(2000%) hue-rotate(335deg) brightness(99%) contrast(106%);
+        background: rgba(0, 0, 0, 0.6);
       }
+    }
+
+    &__item {
+      width: 100%;
+      padding: 0;
+    }
+
+    &__img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      position: absolute;
+      bottom: 0;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .support {
+    &__block {
+      padding-top: 50px;
+      padding-bottom: 50px;
+
+      &::before {
+        background: rgba(0, 0, 0, 0.2)
+      }
+    }
+
+    &__img {
+      display: none;
     }
   }
 }

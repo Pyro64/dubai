@@ -3,7 +3,9 @@
     <div class="block">
       <my-logo :logo="logo"/>
       <div class="item">
-        <my-nav/>
+        <div class="header__wrapper">
+          <my-nav/>
+        </div>
         <n-button c>Contact us</n-button>
       </div>
     </div>
@@ -43,4 +45,19 @@ header {
   justify-content: center;
 }
 
+@media screen and (max-width: 768px) {
+  .block {
+    position: relative;
+    padding-bottom: 30px;
+  }
+  .header {
+    &__wrapper {
+      overflow-x: scroll;
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      left: 0;
+    }
+  }
+}
 </style>

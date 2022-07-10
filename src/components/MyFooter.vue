@@ -100,8 +100,8 @@ import logo from "../assets/images/logo.png";</script>
 
   &__social {
     @include fluid(margin-right, 10px, 20px);
-    @include fluid(width, 14px, 20px);
-    @include fluid(height, 14px, 20px);
+    @include fluid(width, 18px, 20px);
+    @include fluid(height, 18px, 20px);
 
     &:last-child {
       margin-right: 0;
@@ -122,6 +122,29 @@ import logo from "../assets/images/logo.png";</script>
     width: 100%;
     height: 100%;
     object-fit: contain;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .footer {
+    &__block {
+      flex-direction: column;
+    }
+
+    &__wrapper {
+      margin-right: 30px;
+    }
+
+    &__item {
+      margin-bottom: 30px;
+    }
+
+    &__social {
+      margin-top: 15px;
+      width: 25px;
+      height: 25px;
+      margin-right: 30px;
+    }
   }
 }
 </style>

@@ -44,6 +44,10 @@ const themeOverrides = {
   },
   "CollapseTransition": {
     "bezier": "cubic-bezier(.8,2,4)",
+  },
+  "Scrollbar": {
+    "color": "rgba(33,177,255,0.5)",
+    "colorHover": "rgba(33,177,255,0.9)",
   }
 };
 </script>

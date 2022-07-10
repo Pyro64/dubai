@@ -12,7 +12,7 @@ const props = defineProps({
 @import '../assets/styles/mixins.scss';
 
 .title {
-  @include fluid(font-size, 24px, 36px);
+  @include fluid(font-size, 28px, 48px);
   font-weight: 600;
   position: relative;
   text-align: center;

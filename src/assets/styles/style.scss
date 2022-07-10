@@ -21,6 +21,7 @@ body {
   font-family: "Montserrat";
   color: $light;
   font-weight: 400;
+  overflow-x: hidden;
   font-style: normal;
   @include fluid(font-size, 12px, 14px);
 }
