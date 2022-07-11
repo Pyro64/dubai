@@ -2,7 +2,7 @@
   <div :class="{'banner__active': isHover }" class="banner">
     <div class="banner__container">
       <div class="banner__block">
-        <div class="banner__title">Dubai IT Company</div>
+        <div class="banner__title">TRON IT Solutions</div>
         <n-button v-on:mouseenter="isHover = true" v-on:mouseleave="isHover = false" class="banner__btn">Learn More
         </n-button>
       </div>

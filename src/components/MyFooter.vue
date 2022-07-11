@@ -4,6 +4,13 @@
       <div class="footer__item">
         <my-logo :logo="logo"/>
         <div class="footer__copyright">Copyright © 2022 DubaiIt, Inc. All rights reserved.</div>
+        <div class="footer__adress">
+          <span>Wave business centre.</span>
+          <span>Aspin commercial tower.</span>
+          <span>7<sup>TH</sup> floor Office no.21.</span>
+          <span>Sheikh zayed road</span>
+          <span>dubai,UAE</span>
+        </div>
       </div>
       <div class="footer__item flex">
         <div class="footer__wrapper">
@@ -63,6 +70,7 @@ import logo from "../assets/images/logo.png";</script>
     @include container;
     display: flex;
     justify-content: space-between;
+    align-items: center;
   }
 
   &__copyright {
@@ -70,6 +78,18 @@ import logo from "../assets/images/logo.png";</script>
     @include fluid(font-size, 14px, 16px);
     font-weight: 400;
     color: $light;
+  }
+
+  &__adress {
+    @include fluid(margin-top, 15px, 30px);
+    @include fluid(font-size, 14px, 16px);
+    font-weight: 400;
+    color: $light;
+    text-transform: uppercase;
+
+    span {
+      display: block;
+    }
   }
 
   &__wrapper {
@@ -129,6 +149,7 @@ import logo from "../assets/images/logo.png";</script>
   .footer {
     &__block {
       flex-direction: column;
+      align-items: flex-start;
     }
 
     &__wrapper {
