@@ -3,7 +3,7 @@
     <div class="footer__block">
       <div class="footer__item">
         <my-logo :logo="logo"/>
-        <div class="footer__copyright">Copyright © 2022 DubaiIt, Inc. All rights reserved.</div>
+        <div class="footer__copyright">Copyright © 2022 Tron IT, Inc. All rights reserved.</div>
         <div class="footer__adress">
           <span>Wave business centre.</span>
           <span>Aspin commercial tower.</span>

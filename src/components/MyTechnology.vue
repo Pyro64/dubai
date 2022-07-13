@@ -1,69 +1,65 @@
 <template>
-  <my-title title="Our services" />
+  <my-title title="Our services"/>
   <div class="container">
     <div class="card" v-motion-pop-visible>
-      <div class="card__title">Template site</div>
-
+      <div class="card__title">CRM system for organization</div>
       <div class="card__flex">
         <div class="card__item">
           <img
-            class="card__img"
-            alt="img"
-            src="../assets/images/service1.png"
+              class="card__img"
+              alt="img"
+              src="../assets/images/service1.png"
           />
         </div>
         <div class="card__item">
           <div class="card__text">
-            A template site is suitable for those who want to get a site quickly
-            enough or very cheaply. The main advantage of such sites is the
-            built-in adaptability, and the main disadvantage is that it is quite
-            difficult to make changes to the template other than changing texts,
-            pictures and colors of buttons and panels.
+            CRM systems help businesses optimize processes by streamlining mundane workloads, enabling employees to
+            focus on creative and more high-level tasks. Lead management. Sales leads can be tracked through CRM,
+            enabling sales teams to input, track and analyze data for leads in one place. Human resource management
+            (HRM).
           </div>
-          <div class="card__cost">Prise 500$</div>
+          <div class="card__cost">Priсe from 30 000$</div>
         </div>
       </div>
     </div>
     <div class="card" v-motion-pop-visible>
-      <div class="card__title">Landing page</div>
+      <div class="card__title">automatic operation with Data science</div>
 
       <div class="card__flex">
         <div class="card__item">
           <img
-            class="card__img"
-            alt="img"
-            src="../assets/images/service2.png"
+              class="card__img"
+              alt="img"
+              src="../assets/images/service2.png"
           />
         </div>
         <div class="card__item">
           <div class="card__text">
-            The main goal of a one-pager is to get a high conversion: around 5%
-            from paid traffic. Conversion is the ratio of the number of users
-            who left a request or called to the total number of website
-            visitors.
+            A data science driven organization can be described as an entity that maximizes the value from the data
+            available while using machine learning and analytics to create a sustainable competitive advantage.
           </div>
-          <div class="card__cost">prise 750$</div>
+          <div class="card__cost">Priсe for 150 000$</div>
         </div>
       </div>
     </div>
     <div class="card" v-motion-pop-visible>
-      <div class="card__title">Chatbot</div>
+      <div class="card__title">artificial intelligence based OPEN AI</div>
 
       <div class="card__flex">
         <div class="card__item">
           <img
-            class="card__img"
-            alt="img"
-            src="../assets/images/service3.png"
+              class="card__img"
+              alt="img"
+              src="../assets/images/service3.png"
           />
         </div>
         <div class="card__item">
           <div class="card__text">
-            Messenger marketing is gaining more and more popularity these days.
-            86% of mobile phone users have at least one of the messengers: Whats
-            App, Viber, Skype, Telegram.
+            Artificial intelligence is based on the principle that human intelligence can be defined in a way that a
+            machine can easily mimic it and execute tasks, from the most simple to those that are even more complex. The
+            goals of artificial intelligence include mimicking human cognitive activity.
           </div>
-          <div class="card__cost">prise 500$</div>
+          <div class="card__cost">Priсe from 130 000$</div>
         </div>
       </div>
     </div>
@@ -73,9 +69,9 @@
       <div class="card__flex">
         <div class="card__item">
           <img
-            class="card__img"
-            alt="img"
-            src="../assets/images/service4.png"
+              class="card__img"
+              alt="img"
+              src="../assets/images/service4.png"
           />
         </div>
         <div class="card__item">
@@ -85,23 +81,24 @@
             true for those who provide their customers with some kind of
             service.
           </div>
-          <div class="card__cost">prise 250$</div>
+          <div class="card__cost">Priсe from 50 000$</div>
         </div>
       </div>
     </div>
   </div>
 </template>
 <script setup>
-import MyTitle from "./MyTitle.vue";
-</script>
+import MyTitle from "./MyTitle.vue";</script>
 <style scoped lang="scss">
 @import "../assets/styles/mixins.scss";
+
 .container {
   @include container();
   display: flex;
 
   flex-wrap: wrap;
 }
+
 .card {
   @include fluid(padding-top, 10px, 20px);
   @include fluid(padding-bottom, 10px, 20px);
@@ -120,11 +117,13 @@ import MyTitle from "./MyTitle.vue";
   &:nth-child(2n) {
     margin-right: 0;
   }
+
   &__flex {
     display: flex;
     align-items: center;
     justify-content: space-between;
   }
+
   &__item {
     display: flex;
     flex-direction: column;
@@ -133,6 +132,7 @@ import MyTitle from "./MyTitle.vue";
     width: 48%;
     height: 100%;
   }
+
   &__cost {
     @include fluid(font-size, 14px, 16px);
     @include fluid(margin-top, 10px, 15px);
@@ -140,6 +140,7 @@ import MyTitle from "./MyTitle.vue";
     text-transform: uppercase;
     font-weight: 500;
   }
+
   &__title {
     @include fluid(font-size, 14px, 18px);
     @include fluid(margin-bottom, 10px, 20px);
@@ -147,9 +148,11 @@ import MyTitle from "./MyTitle.vue";
     text-transform: uppercase;
     font-weight: 600;
   }
+
   &__text {
     text-align: center;
   }
+
   &__img {
     width: 100%;
     height: 200px;
@@ -157,17 +160,20 @@ import MyTitle from "./MyTitle.vue";
     border-radius: 15px;
   }
 }
-@media screen and(max-width:992px) {
+
+@media screen and(max-width: 992px) {
   .card {
     width: 100%;
     margin-right: 0;
   }
 }
-@media screen and(max-width:576px) {
+
+@media screen and(max-width: 576px) {
   .card {
     &__flex {
       flex-direction: column;
     }
+
     &__item {
       width: 100%;
     }
