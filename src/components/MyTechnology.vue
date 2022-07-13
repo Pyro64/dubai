@@ -2,9 +2,10 @@
   <my-title title="Our services" />
   <div class="container">
     <div class="card" v-motion-pop-visible>
+      <div class="card__title">Template site</div>
+
       <div class="card__flex">
         <div class="card__item">
-          <div class="card__title">Template site</div>
           <img
             class="card__img"
             alt="img"
@@ -24,9 +25,10 @@
       </div>
     </div>
     <div class="card" v-motion-pop-visible>
+      <div class="card__title">Landing page</div>
+
       <div class="card__flex">
         <div class="card__item">
-          <div class="card__title">Landing page</div>
           <img
             class="card__img"
             alt="img"
@@ -45,9 +47,10 @@
       </div>
     </div>
     <div class="card" v-motion-pop-visible>
+      <div class="card__title">Chatbot</div>
+
       <div class="card__flex">
         <div class="card__item">
-          <div class="card__title">Chatbot</div>
           <img
             class="card__img"
             alt="img"
@@ -60,14 +63,15 @@
             86% of mobile phone users have at least one of the messengers: Whats
             App, Viber, Skype, Telegram.
           </div>
-          <div class="card__cost">500$</div>
+          <div class="card__cost">prise 500$</div>
         </div>
       </div>
     </div>
     <div class="card" v-motion-pop-visible>
+      <div class="card__title">Mobile app</div>
+
       <div class="card__flex">
         <div class="card__item">
-          <div class="card__title">Mobile app</div>
           <img
             class="card__img"
             alt="img"
@@ -127,6 +131,7 @@ import MyTitle from "./MyTitle.vue";
     justify-content: space-between;
     align-items: center;
     width: 48%;
+    height: 100%;
   }
   &__cost {
     @include fluid(font-size, 14px, 16px);
@@ -148,8 +153,6 @@ import MyTitle from "./MyTitle.vue";
   &__img {
     width: 100%;
     height: 200px;
-    @include fluid(margin-top, 10px, 20px);
-    @include fluid(margin-bottom, 10px, 20px);
     object-fit: contain;
     border-radius: 15px;
   }
