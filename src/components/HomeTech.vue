@@ -50,7 +50,7 @@ const tech = [
     text: "vue",
     src: vue,
     description:
-      "An open source JavaScript framework for building user interfaces. Easily integrated into projects using other JavaScript libraries. It can function as a web framework for developing single-page applications in a reactive style.Currently maintained by creator Evan Yu and the rest of the active core team members from various companies such as Netlify, Netguru, Baidu, Livestorm. A 2016 survey for JavaScript found Vue to have 89% developer satisfaction. On GitHub, the project has 188K stars, is the third largest project in the history of GitHub",
+      " It can function as a web framework for developing single-page applications in a reactive style.Currently maintained by creator Evan Yu and the rest of the active core team members from various companies such as Netlify, Netguru, Baidu, Livestorm. A 2016 survey for JavaScript found Vue to have 89% developer satisfaction. On GitHub, the project has 188K stars, is the third largest project in the history of GitHub",
   },
   {
     id: 4,
@@ -115,7 +115,6 @@ const tech = [
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
     border: 1px solid $light;
 
     &:nth-child(4n) {

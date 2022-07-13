@@ -81,20 +81,6 @@ IT Consulting services "
           portfolio, and implement the latest technologies.
         </div>
       </n-collapse-item>
-      <!-- <n-collapse-item
-        title="Lorem ipsum dolor sit amet, consectetur adipisicing elit?"
-        name="8"
-      >
-        <div>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus
-          aperiam aspernatur commodi deleniti ducimus, et fuga libero minus vero
-          voluptas. Consequuntur cum, facere nisi obcaecati quis recusandae sint
-          vel? Ipsam?Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-          Debitis harum minus quod vitae! Architecto, asperiores, aspernatur
-          assumenda dolorem eligendi esse est in, iusto laborum quam quas quia
-          sint voluptates. Blanditiis.
-        </div>
-      </n-collapse-item> -->
     </n-collapse>
   </div>
 </template>
