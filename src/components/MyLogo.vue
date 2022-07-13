@@ -1,7 +1,7 @@
 <template>
-  <router-link to="/">
+  <a href="#banner">
     <img :src="logo" alt="logo"/>
-  </router-link>
+  </a>
 
 </template>
 

@@ -1,11 +1,9 @@
 <template>
   <nav>
-    <router-link class="navlink" to="/company">Company</router-link>
-    <router-link class="navlink" to="/services">Services</router-link>
-    <router-link class="navlink" to="/expertise">Expertise</router-link>
-    <router-link class="navlink" to="/case">Case Studies</router-link>
-    <router-link class="navlink" to="/clients">Our clients</router-link>
-    <router-link class="navlink" to="/blog">Blog</router-link>
+    <a class="navlink" href="#about">About</a>
+    <a class="navlink" href="#tech">Technologies</a>
+    <a class="navlink" href="#faq">FAQ</a>
+    <a class="navlink" href="#companies">Companies</a>
   </nav>
 </template>
 
