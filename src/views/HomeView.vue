@@ -1,6 +1,7 @@
 <template>
   <home-banner id="banner"/>
   <home-about id="about"/>
+  <my-technology/>
   <home-tech id="tech"/>
   <faq-company id="faq"/>
   <info-banner
@@ -19,4 +20,5 @@ import HomeTech from "../components/HomeTech.vue";
 import FaqCompany from "../components/FaqCompany.vue";
 import InfoBanner from "../components/InfoBanner.vue";
 import supportBannerImg from "../assets/images/support-banner.png";
-import PartnersCompany from "../components/PartnersCompany.vue";</script>
+import PartnersCompany from "../components/PartnersCompany.vue";
+import MyTechnology from "../components/MyTechnology.vue";</script>
