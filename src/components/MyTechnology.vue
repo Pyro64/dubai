@@ -157,4 +157,20 @@ import MyTitle from "./MyTitle.vue";
     border-radius: 15px;
   }
 }
+@media screen and(max-width:992px) {
+  .card {
+    width: 100%;
+    margin-right: 0;
+  }
+}
+@media screen and(max-width:576px) {
+  .card {
+    &__flex {
+      flex-direction: column;
+    }
+    &__item {
+      width: 100%;
+    }
+  }
+}
 </style>
