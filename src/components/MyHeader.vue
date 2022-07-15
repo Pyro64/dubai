@@ -1,10 +1,10 @@
 <template>
   <header>
     <div class="block">
-      <my-logo :logo="logo"/>
+      <my-logo :logo="logo" />
       <div class="item">
         <div class="header__wrapper">
-          <my-nav/>
+          <my-nav />
         </div>
         <n-button c>Contact us</n-button>
       </div>
@@ -15,7 +15,8 @@
 <script setup>
 import MyLogo from "./MyLogo.vue";
 import MyNav from "./MyNav.vue";
-import logo from "../assets/images/logo.png";</script>
+import logo from "../assets/images/logo.svg";
+</script>
 
 <style lang="scss" scoped>
 @import "../assets/styles/mixins.scss";

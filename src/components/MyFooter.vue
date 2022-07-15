@@ -2,8 +2,10 @@
   <footer class="footer">
     <div class="footer__block">
       <div class="footer__item">
-        <my-logo :logo="logo"/>
-        <div class="footer__copyright">Copyright © 2022 Tron IT, Inc. All rights reserved.</div>
+        <my-logo :logo="logo" />
+        <div class="footer__copyright">
+          Copyright © 2022 Tron IT, Inc. All rights reserved.
+        </div>
         <div class="footer__adress">
           <span>Wave business centre.</span>
           <span>Aspin commercial tower.</span>
@@ -15,12 +17,8 @@
       <div class="footer__item flex">
         <div class="footer__wrapper">
           <router-link class="footer__link" to="/">Cookies</router-link>
-          <router-link class="footer__link" to="/">
-            Privacy
-          </router-link>
-          <router-link class="footer__link" to="/">
-            Terms
-          </router-link>
+          <router-link class="footer__link" to="/"> Privacy </router-link>
+          <router-link class="footer__link" to="/"> Terms </router-link>
         </div>
         <div class="footer__wrapper">
           <router-link class="footer__link" to="/">
@@ -31,20 +29,40 @@
         </div>
       </div>
       <div class="footer__wrapper">
-        <a class="footer__link" href="tel:+7 (800) 555-35-35">+7 (800) 555-35-36</a>
-        <a class="footer__link" href="mailto:example@pochta.com">example@pochta.com</a>
+        <a class="footer__link" href="tel:+7 (800) 555-35-35"
+          >+7 (800) 555-35-36</a
+        >
+        <a class="footer__link" href="mailto:example@pochta.com"
+          >example@pochta.com</a
+        >
         <div class="flex <lg:block">
           <a href="/" class="footer__social">
-            <img class="footer__icon" src="../assets/images/social/facebook.svg" alt="facebook">
+            <img
+              class="footer__icon"
+              src="../assets/images/social/facebook.svg"
+              alt="facebook"
+            />
           </a>
           <a href="/" class="footer__social">
-            <img class="footer__icon" src="../assets/images/social/twitter.svg" alt="twitter">
+            <img
+              class="footer__icon"
+              src="../assets/images/social/twitter.svg"
+              alt="twitter"
+            />
           </a>
           <a href="/" class="footer__social">
-            <img class="footer__icon" src="../assets/images/social/vk.svg" alt="vk">
+            <img
+              class="footer__icon"
+              src="../assets/images/social/vk.svg"
+              alt="vk"
+            />
           </a>
           <a href="/" class="footer__social">
-            <img class="footer__icon" src="../assets/images/social/youtube.svg" alt="youtube">
+            <img
+              class="footer__icon"
+              src="../assets/images/social/youtube.svg"
+              alt="youtube"
+            />
           </a>
         </div>
       </div>
@@ -54,10 +72,11 @@
 
 <script setup>
 import MyLogo from "./MyLogo.vue";
-import logo from "../assets/images/logo.png";</script>
+import logo from "../assets/images/logo.svg";
+</script>
 
 <style lang="scss" scoped>
-@import '../assets/styles/mixins.scss';
+@import "../assets/styles/mixins.scss";
 
 .footer {
   background: rgba(51, 51, 51, 0.6);
@@ -105,7 +124,7 @@ import logo from "../assets/images/logo.png";</script>
   &__link {
     @include fluid(margin-bottom, 10px, 20px);
     @include fluid(font-size, 14px, 16px);
-    color: #FFFFFF;
+    color: #ffffff;
     opacity: 0.8;
     transition: $trn;
 

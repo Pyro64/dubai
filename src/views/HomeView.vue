@@ -1,17 +1,18 @@
 <template>
-  <home-banner id="banner"/>
-  <home-about id="about"/>
-  <my-technology/>
-  <home-tech id="tech"/>
-  <faq-company id="faq"/>
+  <my-spiner />
+  <home-banner id="banner" />
+  <home-about id="about" />
+  <my-technology />
+  <home-tech id="tech" />
+  <faq-company id="faq" />
   <info-banner
-      title="Support service for you"
-      text="24/7 support
+    title="Support service for you"
+    text="24/7 support
 works for you seven days a week"
-      to="/"
-      :img="supportBannerImg"
+    to="/"
+    :img="supportBannerImg"
   />
-  <partners-company id="companies"/>
+  <partners-company id="companies" />
 </template>
 <script setup>
 import HomeBanner from "../components/HomeBanner.vue";
@@ -21,4 +22,6 @@ import FaqCompany from "../components/FaqCompany.vue";
 import InfoBanner from "../components/InfoBanner.vue";
 import supportBannerImg from "../assets/images/support-banner.png";
 import PartnersCompany from "../components/PartnersCompany.vue";
-import MyTechnology from "../components/MyTechnology.vue";</script>
+import MyTechnology from "../components/MyTechnology.vue";
+import MySpiner from "../components/MySpiner.vue";
+</script>
