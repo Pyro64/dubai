@@ -1,5 +1,5 @@
 <template>
-  <transition name="fade">
+  <transition>
     <div :class="{ active: isbool }" class="preloader">
       <img class="logo" src="../assets/images/logo.svg" :logo="logo" />
     </div>
@@ -33,6 +33,7 @@ setTimeout(() => {
   z-index: 10;
   transition: 0.38s ease-in-out;
   opacity: 1;
+  transform: scale(1);
 }
 .active {
   opacity: 0;

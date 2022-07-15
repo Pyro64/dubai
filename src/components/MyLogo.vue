@@ -14,8 +14,8 @@ const props = defineProps({
 @import "../assets/styles/mixins.scss";
 
 img {
-  @include fluid(width, 80px, 100px);
-  @include fluid(height, 80px, 100px);
+  @include fluid(width, 80px, 120px);
+  @include fluid(height, 80px, 120px);
   object-fit: contain;
 }
 </style>
