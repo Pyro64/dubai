@@ -13,8 +13,7 @@ import { ref } from "vue";
 const isbool = ref(false);
 setTimeout(() => {
   isbool.value = true;
-  console.log(isbool.value);
-}, 6000);
+}, 5000);
 </script>
 <style scoped lang="scss">
 @import "../assets/styles/mixins.scss";
